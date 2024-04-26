@@ -1,0 +1,80 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #303030 url("../../public/images/back.jpg") repeat-x 0 0;
+    background-size: cover;
+    animation: MinecraftBackground 165s linear infinite;
+    text-align: center;
+    height: calc(100vh + 2rem);
+    padding: 1rem 0;
+    overflow-y: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+@keyframes MinecraftBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -4096px 0;
+    }
+  }
+
+.container {
+    width: 300px;
+    padding: 20px;
+    /* Cambia el color de fondo a blanco con un 80% de opacidad */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    /* Agrega un margen para separar los cuadros */
+    margin: 20px;
+}
+
+.container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
