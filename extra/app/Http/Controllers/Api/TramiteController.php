@@ -82,6 +82,7 @@ class TramiteController extends Controller
 
     public function update(Request $request, $id) {
         $data = $request->validate([
+            'id' => 'required|integer',
             'nombre' => 'required|string',
             'tipo_id' => 'required|exists:tipos,id',
             'usuario_id' => 'required|exists:users,id',

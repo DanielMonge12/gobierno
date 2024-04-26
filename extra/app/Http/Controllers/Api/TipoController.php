@@ -82,6 +82,7 @@ class TipoController extends Controller
 
     public function update(Request $request, $id) {
         $data = $request->validate([
+            'id' => 'required|integer',
             'nombre' => 'required|string',
             'costo' => 'required|numeric',
             'dependencia_id' => 'required|exists:dependencias,id',
